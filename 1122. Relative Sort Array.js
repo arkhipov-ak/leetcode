@@ -18,3 +18,17 @@ const relativeSortArray = (arr1, arr2) => {
 			(arr2.indexOf(b) === -1 ? arr1.length + b : arr2.indexOf(b))
 	)
 }
+
+// const relativeSortArray = (arr1, arr2) => {
+// 	let hasmap = new Map()
+
+// 	for (let i = 0; i < arr2.length; i++) {
+// 		hasmap.set(arr2[i], i)
+// 	}
+
+// 	return arr1.sort(
+// 		(a, b) =>
+// 			(!hasmap.has(a) ? arr1.length + a : hasmap.get(a)) -
+// 			(!hasmap.has(b) ? arr1.length + b : hasmap.get(b))
+// 	)
+// }
