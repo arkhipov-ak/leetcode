@@ -25,14 +25,16 @@
 // Explanation:
 // Falsey values such as 0 should be filtered out
 
-const filter = (arr, fn) => {
-	let res = []
+const filter = (arr, fn) => arr.filter((x, i) => fn(x, i))
 
-	for (let i = 0; i < arr.length; i++) {
-		if (fn(arr[i], i)) {
-			res.push(arr[i])
-		}
-	}
+// const filter = (arr, fn) => {
+// 	let res = []
 
-	return res
-}
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (fn(arr[i], i)) {
+// 			res.push(arr[i])
+// 		}
+// 	}
+
+// 	return res
+// }
